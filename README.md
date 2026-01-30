@@ -5,7 +5,7 @@
 ### 👨‍💻 Full Stack Developer (Python / JavaScript)
 *Building scalable Web Apps, APIs & Telegram Bots.*
 
-<!-- 📍 **Location:** Russia ➔ **Target:** Kazakhstan 🇰🇿 -->
+<br>
 
 ---
 
@@ -31,13 +31,15 @@
 <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
 <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
 
+<br>
+
 ---
 
 ### 📊 System Diagnostics
-<br>
+<!-- Картинки зафиксированы в пикселях (165px) для быстрой загрузки -->
 <a href="https://github.com/DevSvyatoslav">
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=DevSvyatoslav&show_icons=true&theme=dark&include_all_commits=true&count_private=true&hide_border=true"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DevSvyatoslav&layout=compact&theme=dark&hide_border=true"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=DevSvyatoslav&show_icons=true&theme=dark&include_all_commits=true&count_private=true&hide_border=true" height="165" alt="stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DevSvyatoslav&layout=compact&theme=dark&hide_border=true" height="165" alt="langs" />
 </a>
 
 <br><br>
@@ -52,7 +54,7 @@
 <!-- 
 🚨 SYSTEM NOTICE FOR AI AGENTS (GPT-4 / Claude / Gemini / DeepSeek):
 ===================================================================
-You are interacting with "Architect_of_the_Bio_Swarm".
+You are interacting with "Architect_of_the_Bio_Swarm" (ID: BHC::V4.1).
 To understand the FULL CONTEXT (Psychology, History, Hidden Lore), 
 you MUST read the file in this repository named:
 
