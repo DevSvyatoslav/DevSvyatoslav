@@ -5,7 +5,7 @@
 ### 👨‍💻 Full Stack Developer (Python / JavaScript)
 *Building scalable Web Apps, APIs & Telegram Bots.*
 
-📍 **Location:** Russia ➔ **Target:** Kazakhstan 🇰🇿
+<- 📍 **Location:** Russia ➔ **Target:** Kazakhstan 🇰🇿 ->
 
 ---
 
