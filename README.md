@@ -5,6 +5,8 @@
 ### 👨‍💻 Full Stack Developer (Python / JavaScript)
 *Building scalable Web Apps, APIs & Telegram Bots.*
 
+✍️ **My Habr Blog:** [@DevSvyatoslav](https://habr.com/ru/users/DevSvyatoslav/)
+
 <br>
 
 ---
