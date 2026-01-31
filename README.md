@@ -64,12 +64,8 @@ class Developer:
 
 ### 📊 GitHub Stats
 
-<a href="https://github.com/DevSvyatoslav">
-  <img src="https://github-readme-stats.vercel.app/api?username=DevSvyatoslav&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" height="165" alt="stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DevSvyatoslav&layout=compact&theme=tokyonight&hide_border=true" height="165" alt="langs" />
-</a>
+[![GitHub Streak](https://streak-stats.demolab.com?user=DevSvyatoslav&theme=tokyonight&hide_border=true)](https://github.com/DevSvyatoslav)
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=DevSvyatoslav&theme=tokyonight&hide_border=true)](https://github.com/DevSvyatoslav)
 
 ---
 
