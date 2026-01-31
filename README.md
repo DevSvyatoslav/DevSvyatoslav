@@ -75,5 +75,5 @@ class Developer:
   <img src="https://img.shields.io/badge/Habr-65A3BE?style=for-the-badge&logo=habr&logoColor=white" />
 </a>
 
-</div>
-```
+```html
+
