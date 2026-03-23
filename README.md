@@ -5,7 +5,7 @@
 ### 👨‍💻 Full Stack Developer (Python / JavaScript)
 *Building scalable Web Apps, APIs & Telegram Bots.*
 
-✍️ **My Habr Blog:** [@DevSvyatoslav](https://habr.com/ru/users/DevSvyatoslav/)
+<!-- ✍️ **My Habr Blog:** [@DevSvyatoslav](https://habr.com/ru/users/DevSvyatoslav/) -->
 
 ---
 
@@ -43,6 +43,9 @@
 <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
 <!-- <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" /> -->
 <!-- <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" /> -->
+<img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+
 ---
 
 ### 🚀 What I Do
@@ -64,15 +67,12 @@ class Developer:
 ### 📊 GitHub Stats
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=DevSvyatoslav&theme=tokyonight&hide_border=true)](https://github.com/DevSvyatoslav)
-
-
----
+<!-- --- -->
 <!--
 ### 📫 Contact Me
 
 <a href="https://habr.com/ru/users/DevSvyatoslav/">
   <img src="https://img.shields.io/badge/Habr-65A3BE?style=for-the-badge&logo=habr&logoColor=white" />
 </a>
-
-```html
 -->
+```html
