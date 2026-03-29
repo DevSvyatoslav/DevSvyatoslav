@@ -2,21 +2,19 @@ name: Metrics
 
 on:
   schedule:
-    - cron: "0 0 * * *"       # запуск раз в сутки (по UTC)
-  workflow_dispatch:          # запуск руками из Actions
+    - cron: "0 0 * * *"       # запуск раз в сутки (UTC)
+  workflow_dispatch:          # запуск вручную
   push:
-    branches:
-      - main
-      - master
+    branches: [main, master]
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
     permissions:
-      contents: write         # нужно, чтобы коммитить .svg в репозиторий
+      contents: write         # чтобы коммитить .svg в репозиторий
 
     steps:
-      # 1) Основная карточка: языки + технологии (topics)
+      # 1) Карточка: языки + технологии (topics)
       - name: Main card (languages + topics)
         uses: lowlighter/metrics@latest
         with:
@@ -29,21 +27,21 @@ jobs:
           # Языки
           plugin_languages: yes
           plugin_languages_details: percentage
-          plugin_languages_limit: 8        # максимум 8; остальные в "Other"
+          plugin_languages_limit: 8
           plugin_languages_other: yes
           # plugin_languages_ignored: html, css   # опционально скрыть лишнее
 
-          # Технологии (звёздные темы с иконками)
+          # Технологии (звёздные topics)
           plugin_topics: yes
           plugin_topics_mode: icons
           plugin_topics_limit: 12
 
-      # 2) Отдельная картинка MBTI (16Personalities)
+      # 2) Отдельная карточка MBTI (16Personalities)
       - name: MBTI (16Personalities)
         uses: lowlighter/metrics@latest
         with:
           user: DevSvyatoslav
-          token: ${{ secrets.GITHUB_TOKEN }}   # тоже встроенный токен
+          token: ${{ secrets.GITHUB_TOKEN }}
           base: ""
           filename: metrics.plugin.16personalities.svg
 
