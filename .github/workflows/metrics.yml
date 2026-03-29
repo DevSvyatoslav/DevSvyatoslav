@@ -1,41 +1,37 @@
-name: Metrics (stack only)
+name: Languages (indepth)
 
 on:
   schedule:
-    - cron: "0 0 * * *"      # раз в сутки (UTC)
-  workflow_dispatch:          # ручной запуск
+    - cron: "0 0 * * *"        # запуск раз в сутки (UTC)
+  workflow_dispatch:           # ручной запуск
   push:
     branches: [main, master]
 
 jobs:
-  stack:
+  languages_indepth:
     runs-on: ubuntu-latest
     permissions:
-      contents: write         # чтобы записать svg в репозиторий
+      contents: write          # нужно, чтобы записать SVG в репозиторий
 
     steps:
-      - name: Stack (languages + topics, no header)
+      - name: Languages indepth (public repos only)
         uses: lowlighter/metrics@latest
         with:
           user: DevSvyatoslav
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-          # ВАЖНО: пустой base = не будет "хедера" с коммитами/контрибами
-          base: ""
+          token: ${{ secrets.GITHUB_TOKEN }}   # встроенный токен, PAT не нужен
+          base: ""                             # ВАЖНО: без шапки/коммит-статистики
           template: classic
-          filename: stack.svg
+          filename: metrics.plugin.languages.indepth.svg
 
-          # Языки (только проценты, без коммит-статистики)
+          # ЯЗЫКИ (глубокий анализ: строки кода + байты + проценты)
           plugin_languages: yes
-          plugin_languages_details: percentage
-          plugin_languages_limit: 8
+          plugin_languages_indepth: yes
+          plugin_languages_details: lines, bytes-size, percentage
+          plugin_languages_limit: 12
           plugin_languages_other: yes
-          # Опционально "недавние" вместо "за всё время":
+          # По желанию можно скрыть "шум":
+          # plugin_languages_ignored: html, css, scss, md, json, yaml
+          # Или показать "недавно использованные" вместо "за всё время":
           # plugin_languages_sections: recently-used
           # plugin_languages_recent_days: 14
           # plugin_languages_recent_load: 400
-
-          # Технологии (по Star на topics)
-          plugin_topics: yes
-          plugin_topics_mode: icons
-          plugin_topics_limit: 12
