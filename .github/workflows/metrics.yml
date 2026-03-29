@@ -2,28 +2,29 @@ name: Languages (indepth)
 
 on:
   schedule:
-    - cron: "0 0 * * *"        # запуск раз в сутки (UTC)
-  workflow_dispatch:           # ручной запуск
+    - cron: "0 0 * * *"        # раз в сутки (UTC)
+  workflow_dispatch:           # ручной запуск из вкладки Actions
   push:
-    branches: [main, master]
+    branches: [main, master]   # опционально: при пуше в main/master
 
 jobs:
   languages_indepth:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
-      contents: write          # нужно, чтобы записать SVG в репозиторий
+      contents: write          # нужно, чтобы записать SVG обратно в репозиторий
 
     steps:
-      - name: Languages indepth (public repos only)
+      - name: Languages indepth (all repos via PAT)
         uses: lowlighter/metrics@latest
         with:
           user: DevSvyatoslav
-          token: ${{ secrets.GITHUB_TOKEN }}   # встроенный токен, PAT не нужен
-          base: ""                             # ВАЖНО: без шапки/коммит-статистики
+          token: ${{ secrets.METRICS_TOKEN }}   # PAT из секрета (учтёт приватные репозитории)
+          base: ""                              # без шапки/коммит-статистики
           template: classic
           filename: metrics.plugin.languages.indepth.svg
 
-          # ЯЗЫКИ (глубокий анализ: строки кода + байты + проценты)
+          # ЯЗЫКИ (глубокий анализ: клонирует репозитории)
           plugin_languages: yes
           plugin_languages_indepth: yes
           plugin_languages_details: lines, bytes-size, percentage
@@ -31,7 +32,7 @@ jobs:
           plugin_languages_other: yes
           # По желанию можно скрыть "шум":
           # plugin_languages_ignored: html, css, scss, md, json, yaml
-          # Или показать "недавно использованные" вместо "за всё время":
+          # Или переключиться на "недавно использованные":
           # plugin_languages_sections: recently-used
           # plugin_languages_recent_days: 14
           # plugin_languages_recent_load: 400
