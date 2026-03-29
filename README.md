@@ -66,7 +66,7 @@ class Developer:
 
 ### 📊 GitHub Stats
 
-<img src="./stack.svg" alt="Tech stack" width="100%">
+<img src="./metrics.plugin.languages.indepth.svg?v=2" width="100%">
 
 <!-- [![GitHub Streak](https://streak-stats.demolab.com?user=DevSvyatoslav&theme=tokyonight&hide_border=true)](https://github.com/DevSvyatoslav) -->
 <!-- --- -->
