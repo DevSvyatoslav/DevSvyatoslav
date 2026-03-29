@@ -1,46 +1,41 @@
-name: Metrics
+name: Metrics (stack only)
 
 on:
   schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+    - cron: "0 0 * * *"      # раз в сутки (UTC)
+  workflow_dispatch:          # ручной запуск
   push:
     branches: [main, master]
 
 jobs:
-  github-metrics:
+  stack:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write         # чтобы записать svg в репозиторий
 
     steps:
-      - name: Main card (languages + topics)
+      - name: Stack (languages + topics, no header)
         uses: lowlighter/metrics@latest
         with:
           user: DevSvyatoslav
           token: ${{ secrets.GITHUB_TOKEN }}
-          filename: github-metrics.svg
-          template: classic
-          base: header, repositories, metadata
 
+          # ВАЖНО: пустой base = не будет "хедера" с коммитами/контрибами
+          base: ""
+          template: classic
+          filename: stack.svg
+
+          # Языки (только проценты, без коммит-статистики)
           plugin_languages: yes
           plugin_languages_details: percentage
           plugin_languages_limit: 8
           plugin_languages_other: yes
+          # Опционально "недавние" вместо "за всё время":
+          # plugin_languages_sections: recently-used
+          # plugin_languages_recent_days: 14
+          # plugin_languages_recent_load: 400
 
+          # Технологии (по Star на topics)
           plugin_topics: yes
           plugin_topics_mode: icons
           plugin_topics_limit: 12
-
-      - name: MBTI (16Personalities)
-        uses: lowlighter/metrics@latest
-        with:
-          user: DevSvyatoslav
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: ""
-          filename: metrics.plugin.16personalities.svg
-
-          plugin_16personalities: yes
-          plugin_16personalities_url: ${{ secrets.SIXTEEN_PERSONALITIES_URL }}
-          plugin_16personalities_sections: personality, traits
-          plugin_16personalities_scores: yes
