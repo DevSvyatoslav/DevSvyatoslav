@@ -66,7 +66,8 @@ class Developer:
 
 ### 📊 GitHub Stats
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=DevSvyatoslav&theme=tokyonight&hide_border=true)](https://github.com/DevSvyatoslav)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=DevSvyatoslav&layout=compact)
+<!-- [![GitHub Streak](https://streak-stats.demolab.com?user=DevSvyatoslav&theme=tokyonight&hide_border=true)](https://github.com/DevSvyatoslav) -->
 <!-- --- -->
 <!--
 ### 📫 Contact Me
