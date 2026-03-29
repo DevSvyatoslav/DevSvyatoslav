@@ -66,7 +66,12 @@ class Developer:
 
 ### 📊 GitHub Stats
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=DevSvyatoslav&layout=compact)
+<!-- Основная карточка с языками и технологиями -->
+<img src="./github-metrics.svg" alt="GitHub Metrics" width="100%">
+
+<!-- MBTI -->
+<img src="./metrics.plugin.16personalities.svg" alt="16Personalities" width="600">
+
 <!-- [![GitHub Streak](https://streak-stats.demolab.com?user=DevSvyatoslav&theme=tokyonight&hide_border=true)](https://github.com/DevSvyatoslav) -->
 <!-- --- -->
 <!--
